@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Ironblade</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="game-board">
+        <!--division principal-->
+        <div style="position: relative; display:inline-block">
+            <div style="
+             position:absolute; 
+             display:flex; 
+             width:100%; 
+             align-items: center;
+             padding: 20px;">
+
+                <!--Player-->
+                <div style="position:relative;
+                 height:50px; 
+                 width:100%; 
+                 display:flex; 
+                 justify-content: flex-end">
+
+                    <div style="background-color: red; height:50px;width: 100%;"></div>
+                    <div id="playerHealth" style="position:absolute; 
+                        background-color: yellow; 
+                        top:0;
+                        right: 0;
+                        bottom: 0; 
+                        width:100%">
+                    </div>
+                </div>
+                <!--Logo-->
+
+                <div>
+                    <img src="images/logo.png" alt="soy tu padre">
+                </div>
+
+                <!--Enemy-->
+                <div style="position:relative;height:50px; width:100%">
+
+                    <div style="background-color: red; height:50px"></div>
+                    <div id="enemyHealth" style="position:absolute; 
+                        background-color: yellow; 
+                        top:0;
+                        right: 0;
+                        bottom: 0;
+                        left:0"></div>
+                </div>
+            </div>
+            <canvas>
+
+            </canvas>
+        </div>
+
+        <script src="./js/player1.js"></script>
+        <script src="./js/stamina.js"></script>
+        <script src="./js/game.js"></script>
+        <script src="./js/index.js"></script>
+</body>
+
+</html>
