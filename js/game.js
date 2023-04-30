@@ -100,8 +100,8 @@ const oneVone = {
     },
 
     createPlayers() { //Enlaza con la clase players para darle las propiedades 
-        this.player = new Player(this.ctx, this.canvasSize, 600, 50, 0, "player", this.framesCounter)
-        this.enemy = new Player(this.ctx, this.canvasSize, 1400, 50, 0, "enemy", this.framesCounter)
+        this.player = new Player(this.ctx, this.canvasSize, 400, 50, 0, "player", this.framesCounter)
+        this.enemy = new Player(this.ctx, this.canvasSize, 1100, 50, 0, "enemy", this.framesCounter)
     },
 
     setEventListeners() {
@@ -118,7 +118,7 @@ const oneVone = {
                 this.player.playersSpecs.pos.x += 20
                 this.player.attackBox.pos.x += 20
             }
-            //aqui estan los mandos del enemigo<<<<<<<<<<<<<
+            //movement enemy <<<<<<<<<<<<<<<<<<<<<<<<
             if (keysPressed['k']) {
                 this.enemy.playersSpecs.pos.x -= 20
                 this.enemy.attackBox.pos.x -= 20
@@ -147,7 +147,6 @@ const oneVone = {
                     this.player.attackBox.pos.x -= 100
                     this.jumpPlayer()  //movements 
                     this.musicJump()
-
                 }
             }
             if (keysPressed['e']) {
@@ -164,7 +163,6 @@ const oneVone = {
                 this.playerIsAtacking = false
                 this.attackPlayer()
                 this.musicAttack()
-
             }
             //salto de Enemy<<<<<<<<<<<<<<<<<<<<<<
             if (keysPressed['o']) {
@@ -211,7 +209,6 @@ const oneVone = {
             delete keysPressed[key]
         }
     },
-
     attackPlayer() {
         this.isAttacking = true
         this.player.playerIsAtacking = true
@@ -234,7 +231,6 @@ const oneVone = {
             }
         }
     },
-
     attackEnemy() {
         this.enemyIsAttacking = true
         this.enemy.enemyIsAtacking = true
@@ -270,7 +266,6 @@ const oneVone = {
         this.player.playersSpecs.velocity.y -= 20;
         // this.player.attackBox.pos.y -= 400;
         this.player.attackBox.velocity.y -= 20;
-
     },
     jumpEnemy() {
         this.enemyIsJumping = true
@@ -291,7 +286,6 @@ const oneVone = {
         this.attackSound.pause()
         this.jumpSound.pause()
     },
-
     reset() {
         this.createPlayers()
         this.initBackground()
@@ -299,6 +293,5 @@ const oneVone = {
     clearAll() {
         this.ctx.clearRect(0, 0, this.canvasSize.w, this.canvasSize.h)
     },
-
 }
 

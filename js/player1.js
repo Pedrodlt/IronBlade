@@ -1,6 +1,5 @@
 class Player {
     constructor(ctx, canvasSize, posX, sizeW, posY, playerId, framesCounter) {
-
         this.ctx = ctx
         this.canvasSize = canvasSize
         this.imageInstance = undefined
@@ -69,7 +68,7 @@ class Player {
         //         this.playersSpecs.size.w,
         //         this.playersSpecs.size.h);
 
-        //dibujar player
+        //Dibujar player posicion inicial
         if (this.playerId === 'player' && !this.playerIsAtacking && !this.playerIsJump) {
             this.ctx.drawImage(
                 this.playersImg,
@@ -159,7 +158,6 @@ class Player {
         if (this.enemyIsJump) this.animateJump(framesCounter)
         this.animate(framesCounter)
     }
-
     animate(framesCounter) {
         if (framesCounter % 6 == 0) {
             this.playersImg.framesIndex++ && this.enemyImg.framesIndex++
@@ -218,13 +216,4 @@ class Player {
             this.attackBox.velocity.y += this.gravity
         }
     }
-
-
-
-
-
-
-
-
-
 }
